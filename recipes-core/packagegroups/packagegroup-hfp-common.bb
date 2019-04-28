@@ -12,7 +12,6 @@ RDEPENDS_${PN} = " \
 	libglapi \
 	libgles1-mesa \
 	libgles2-mesa \
-	cryptfs-auth \
 	htop \
 	grep \
 	sed \
