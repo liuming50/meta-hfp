@@ -273,7 +273,7 @@ DISABLE_SPLASH = "1"
 DISABLE_RPI_BOOT_LOGO = "1"
 DISABLE_OVERSCAN = "1"
 
-# Cerebra default providers
+# HFP default providers
 PREFERRED_PROVIDER_virtual/libgbm = "${@bb.utils.contains("MACHINE_FEATURES", "vc4graphics", "mesa", "mesa-gl", d)}"
 PREFERRED_RPROVIDER_virtual/network-configuration = "networkmanager"
 
@@ -285,14 +285,11 @@ MACHINE_FEATURES_append = " vc4graphics"
 
 LICENSE_FLAGS_WHITELIST = "commercial"
 
-# Could be omxplayer or ffplayer
-# CEREBRA_VIDEO_PLAYER = "omxplayer"
-CEREBRA_VIDEO_PLAYER = "ffplay"
-CEREBRA_VIDEO_ARGS = "-autoexit -fs"
-
 # Default driver is: xf86-input-libinput (by setting empty)
 # Alternatives are: xf86-input-evdev, xf86-input-synaptics
-CEREBRA_INPUT_DRIVER = ""
+HFP_INPUT_DRIVER = ""
+
+CONNECTIVITY_CHECK_URIS = "https://www.google.com/"
 
 RPI_KERNEL_DEVICETREE_OVERLAYS = " \
     overlays/at86rf233.dtbo \
