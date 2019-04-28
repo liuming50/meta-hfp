@@ -1,0 +1,12 @@
+
+### Shell environment set up for HFP Yocto builds. ###
+
+Supported machines:
+    raspberrypi3
+
+Common targets are:
+    core-image-hfp-x11
+
+You can run bitbake as follows to build a specific image:
+    MACHINE=raspberrypi3 bitbake core-image-hfp-x11
+
