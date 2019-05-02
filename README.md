@@ -64,14 +64,14 @@ Set up the environment:
 ```
 $ cd ~/hfp-workspace
 $ . hfp-init-build-env
-$ bitbake core-image-hfp-x11
+$ bitbake core-image-hfp-sato
 ```
 
 
 # Deploy the image to a SDCard (assume the SDCard is /dev/sdb on your host machine)
 
 ```
-$ sudo dd if=~/hfp-workspace/build/tmp/deploy/images/raspberrypi3/core-image-hfp-x11-raspberrypi3.rpi-sdimg of=/dev/sdb
+$ sudo dd if=~/hfp-workspace/build/tmp/deploy/images/raspberrypi3/core-image-hfp-sato-raspberrypi3.rpi-sdimg of=/dev/sdb
 ```
 
 # Tested Hardware

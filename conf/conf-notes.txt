@@ -5,8 +5,8 @@ Supported machines:
     raspberrypi3
 
 Common targets are:
-    core-image-hfp-x11
+    core-image-hfp-sato
 
 You can run bitbake as follows to build a specific image:
-    MACHINE=raspberrypi3 bitbake core-image-hfp-x11
+    MACHINE=raspberrypi3 bitbake core-image-hfp-sato
 
