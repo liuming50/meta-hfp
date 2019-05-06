@@ -28,6 +28,7 @@ if [ -d "$MINI_X_SESSION_DIR" ]; then
 fi
 
 xrandr -s 1024x600
-/usr/bin/hfstandalone -qws
+#/usr/bin/hfstandalone -qws
+matchbox-terminal&
 
 exec matchbox-window-manager
