@@ -5,6 +5,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 inherit packagegroup
 
 RDEPENDS_${PN} = " \
+	blueman \
 	util-linux-lscpu \
 	libgl-mesa \
 	libegl-mesa \
