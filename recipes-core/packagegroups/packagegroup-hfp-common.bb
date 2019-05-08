@@ -23,6 +23,7 @@ RDEPENDS_${PN} = " \
 	pulseaudio-module-bluetooth-policy \
 	pulseaudio-module-bluez5-discover \
 	ofono \
+	ofono-tests \
 	nohands \
 	vim-tiny \
 	i2c-tools \
