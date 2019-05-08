@@ -17,7 +17,11 @@ RDEPENDS_${PN} = " \
 	grep \
 	sed \
 	dstat \
-	pulseaudio \
+	pulseaudio-server \
+	pulseaudio-misc \
+	pulseaudio-lib-bluez5-util \
+	pulseaudio-module-bluetooth-policy \
+	pulseaudio-module-bluez5-discover \
 	ofono \
 	nohands \
 	vim-tiny \
