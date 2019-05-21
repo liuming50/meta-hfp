@@ -250,7 +250,7 @@ CONF_VERSION = "1"
 OE_TERMINAL = "screen"
 
 # DISTRO_FEATURES_append = " bootchart"
-DISTRO_FEATURES_remove = "wayland ptest"
+DISTRO_FEATURES_remove = "wayland ptest pulseaudio"
 
 # Use systemd for system initialization
 DISTRO_FEATURES_append = " systemd"
