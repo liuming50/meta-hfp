@@ -1,6 +1,6 @@
 [Unit]
 Description=Bluetooth Audio ALSA Backend
-After=bluetooth.service
+After=bluetooth.service bthelper@hci0.service
 Requires=bluetooth.service
 
 [Service]
