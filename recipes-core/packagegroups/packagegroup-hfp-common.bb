@@ -15,6 +15,8 @@ PULSEAUDIO_PACKAGES = " \
 BLUEZ_AUDIO_PACKAGES = "${@bb.utils.contains('DISTRO_FEATURES', 'pulseaudio', '${PULSEAUDIO_PACKAGES}', 'bluez-alsa bluez-tools', d)}"
 
 RDEPENDS_${PN} = " \
+	wget \
+	curl \
 	${BLUEZ_AUDIO_PACKAGES} \
 	util-linux-lscpu \
 	libgl-mesa \
