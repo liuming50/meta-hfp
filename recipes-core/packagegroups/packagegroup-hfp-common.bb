@@ -4,8 +4,18 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 inherit packagegroup
 
+PULSEAUDIO_PACKAGES = " \
+	pulseaudio-server \
+	pulseaudio-misc \
+	pulseaudio-lib-bluez5-util \
+	pulseaudio-module-bluetooth-policy \
+	pulseaudio-module-bluez5-discover \
+"
+
+BLUEZ_AUDIO_PACKAGES = "${@bb.utils.contains('DISTRO_FEATURES', 'pulseaudio', '${PULSEAUDIO_PACKAGES}', 'bluez-alsa bluez-tools', d)}"
+
 RDEPENDS_${PN} = " \
-	blueman \
+	${BLUEZ_AUDIO_PACKAGES} \
 	util-linux-lscpu \
 	libgl-mesa \
 	libegl-mesa \
@@ -17,14 +27,8 @@ RDEPENDS_${PN} = " \
 	grep \
 	sed \
 	dstat \
-	pulseaudio-server \
-	pulseaudio-misc \
-	pulseaudio-lib-bluez5-util \
-	pulseaudio-module-bluetooth-policy \
-	pulseaudio-module-bluez5-discover \
 	ofono \
 	ofono-tests \
-	nohands \
 	vim-tiny \
 	i2c-tools \
 	ntp \
