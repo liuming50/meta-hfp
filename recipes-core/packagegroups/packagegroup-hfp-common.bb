@@ -10,9 +10,10 @@ PULSEAUDIO_PACKAGES = " \
 	pulseaudio-lib-bluez5-util \
 	pulseaudio-module-bluetooth-policy \
 	pulseaudio-module-bluez5-discover \
+	ofono ofono-tests \
 "
 
-BLUEZ_AUDIO_PACKAGES = "${@bb.utils.contains('DISTRO_FEATURES', 'pulseaudio', '${PULSEAUDIO_PACKAGES}', 'bluez-alsa bluez-tools', d)}"
+BLUEZ_AUDIO_PACKAGES = "${@bb.utils.contains('DISTRO_FEATURES', 'pulseaudio', '${PULSEAUDIO_PACKAGES}', 'bluez-alsa bluez-tools alsa-utils', d)}"
 
 RDEPENDS_${PN} = " \
 	wget \
@@ -29,8 +30,6 @@ RDEPENDS_${PN} = " \
 	grep \
 	sed \
 	dstat \
-	ofono \
-	ofono-tests \
 	vim-tiny \
 	i2c-tools \
 	ntp \
